@@ -12,7 +12,7 @@ export class AuthService {
   private loginApiUrl: string = environment.apiUrlFront;
   vendorId: any = null;
  
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private http: HttpClient, private route: ActivatedRoute) { }
  
   loginVendor(email: string, token: string, vendor_id: any){
     return this.http.post(`${environment.apiUrl}cmo/validate_token`, {token: token, email: email, id: vendor_id}).pipe(
