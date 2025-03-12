@@ -1,0 +1,27 @@
+<div class="input-container">
+  <label >{{ label }}</label>
+  <div *ngIf="control.errors && (control.dirty || control.touched)">
+    <small class="error">{{ getErrors() }}</small>
+  </div>
+  <div class="input-choose-option">
+    <label>
+      <input
+        name="{{ controlName }}"
+        (ngModelChange)="setDescriptionControl($event, controlName)"
+        [formControl]="control"
+        type="radio"
+        [value]="'1'"> Sí
+    </label>
+    <label>
+      <input
+        name="{{ controlName }}"
+        [formControl]="control"
+        (ngModelChange)="setDescriptionControl($event, controlName)"
+        type="radio"
+        [value]="'0'"> No
+    </label>
+  </div>
+  <div *ngIf="!getErrors()">
+    <small class="description">{{ description }}</small>
+  </div>
+</div>
