@@ -3,13 +3,12 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { VendorService } from '../../../services/vendor.service';
 import { AuthService } from '../../../services/auth.service';
 import { VENDORFORMSTATUS } from '../../../shared/interfaces/typo_vendor_form_status';
-import { PanelButtonsComponent } from '../../molecules/panel-buttons/panel-buttons.component';
 import { LogoComponent } from '../../atoms/logo/logo.component';
 
 @Component({
   selector: 'app-thanks',
   standalone: true,
-  imports: [RouterModule, PanelButtonsComponent, LogoComponent],
+  imports: [RouterModule, LogoComponent],
   templateUrl: './thanks.component.html',
   styleUrl: './thanks.component.css'
 })
