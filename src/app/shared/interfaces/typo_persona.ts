@@ -1,4 +1,4 @@
 export enum TIPOPERSONA {
-    Natural = 15,
-    Juridica = 16,
+    Natural = 17,
+    Juridica = 18,
 }
