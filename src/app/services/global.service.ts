@@ -11,6 +11,9 @@ export class GlobalService {
   setVinculationForm(data: any) {
     var formData = {
       name: data[('name')],
+      second_name: data[('second_name')],
+      first_last_name: data[('first_last_name')],
+      second_last_name: data[('second_last_name')],
       f_document_type_id: data[('document_type_id')],
       document: data[('document')],
       ciiu: data[('ciiu')],
@@ -157,6 +160,9 @@ export class GlobalService {
 
   fillInitialVinculationForm(form: any, data: any) {
     form.get('name')?.setValue(data?.name || '', { emitEvent: false });
+    form.get('second_name')?.setValue(data?.second_name || '', { emitEvent: false });
+    form.get('first_last_name')?.setValue(data?.first_last_name || '', { emitEvent: false });
+    form.get('second_last_name')?.setValue(data?.second_last_name || '', { emitEvent: false });
     form.get('document_type_id')?.setValue(data?.f_document_type_id || '');
     form.get('document')?.setValue(data?.document || '', { emitEvent: false });
     form.get('ciiu')?.setValue(data?.ciiu || '');
@@ -289,13 +295,13 @@ export class GlobalService {
       }
     }
   }
-  
+
 
   getQuestionData(id: any, answers: any[], controlName?: string, form?: any) {
     let answer = answers.find((an: any) => an.id == id);
     if (answer.value === true && controlName) {
       form.get(`${controlName}_description`)?.setValidators(Validators.required);
-    } 
+    }
     else if (answer.value !== true && controlName){
       form.get(`${controlName}_description`)?.removeValidators(Validators.required);
     }
@@ -332,7 +338,7 @@ export class GlobalService {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
-  
+
     return `${day}/${month}/${year}`;
   }
 
