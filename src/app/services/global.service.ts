@@ -12,7 +12,7 @@ export class GlobalService {
     var formData = {
       name: data[('name')],
       second_name: data[('second_name')],
-      first_last_name: data[('first_last_name')],
+      last_name: data[('first_last_name')],
       second_last_name: data[('second_last_name')],
       f_document_type_id: data[('document_type_id')],
       document: data[('document')],
