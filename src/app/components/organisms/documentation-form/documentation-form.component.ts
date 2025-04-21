@@ -32,6 +32,7 @@ import { TextInputComponent } from '../../atoms/text-input/text-input.component'
 export class DocumentationFormComponent implements OnInit {
 
   @Input() typeVendor: any = null;
+  @Input() personType: TIPOPERSONA = TIPOPERSONA.Natural;
 
   readonly TIPOPERSONA = TIPOPERSONA;
   readonly VENDORFORMSTATUS = VENDORFORMSTATUS;
@@ -42,7 +43,8 @@ export class DocumentationFormComponent implements OnInit {
   documentForm: FormGroup;
   subs: Subscription[] = [];
 
-  nonRequiredDocuments: FileType[] = [FileType.ARLcertification];
+  nonRequiredDocuments: FileType[] = [FileType.ARLcertification, FileType.AdditinalDocs];
+  nonRequiredDocumentsLegal: FileType[] = [FileType.CopyDocPersonService];
   arrayDocuments: FileType[] = [FileType.AdditinalDocs];
 
 
@@ -104,7 +106,7 @@ export class DocumentationFormComponent implements OnInit {
       link: new FormControl(file?.link),
     });
 
-    if (!this.nonRequiredDocuments.includes(doc.id)) {
+    if (!this.nonRequiredDocuments.includes(doc.id) && (this.personType == TIPOPERSONA.Juridica ? !this.nonRequiredDocumentsLegal.includes(doc.id) : true)) {
       newFileGroup.controls.file.addValidators(Validators.required);
       newFileGroup.controls.file.updateValueAndValidity();
     }

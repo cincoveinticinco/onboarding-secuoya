@@ -4,7 +4,7 @@ export const file_types: {[key: number]: string} = {
   326: 'rut',
   327: 'bank_certification',
   328: 'color_photo',
-  329: 'arl_affiliation_certification',
+  509: 'arl_affiliation_certification',
   330: 'authorization_letter',
   331: 'commerce_chamber_certificate',
   332: 'identity_document_copy',
@@ -13,6 +13,7 @@ export const file_types: {[key: number]: string} = {
 };
 
 export enum FileType {
-  AdditinalDocs = 345,
-  ARLcertification = 329,
+  AdditinalDocs = 525,
+  ARLcertification = 509,
+  CopyDocPersonService = 505,
 }

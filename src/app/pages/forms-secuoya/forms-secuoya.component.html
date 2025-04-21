@@ -21,7 +21,7 @@
 		}
 		@else if([VENDORSTATUS.VINCULACION, VENDORSTATUS.CORRECION_DOCS].includes(vendorStatus)) {
       <app-form-header [title]="title"/>
-		  <app-documentation-form />
+      <app-documentation-form [personType]="typePerson" />
 		}
 		@else {
 		  <app-thanks />
