@@ -13,7 +13,8 @@ export const file_types: {[key: number]: string} = {
 };
 
 export enum FileType {
-  AdditinalDocs = 525,
-  ARLcertification = 509,
   CopyDocPersonService = 505,
+  ColorPhoto = 508,
+  ARLcertification = 509,
+  AdditinalDocs = 525,
 }

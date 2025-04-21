@@ -44,7 +44,7 @@ export class DocumentationFormComponent implements OnInit {
   subs: Subscription[] = [];
 
   nonRequiredDocuments: FileType[] = [FileType.ARLcertification, FileType.AdditinalDocs];
-  nonRequiredDocumentsLegal: FileType[] = [FileType.CopyDocPersonService];
+  nonRequiredDocumentsLegal: FileType[] = [FileType.CopyDocPersonService, FileType.ColorPhoto];
   arrayDocuments: FileType[] = [FileType.AdditinalDocs];
 
 
