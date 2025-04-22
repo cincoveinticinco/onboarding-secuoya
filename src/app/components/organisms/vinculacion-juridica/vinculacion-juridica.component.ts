@@ -46,7 +46,8 @@ import { ServiceProviderDataComponent } from "../../molecules/service-provider-d
     PersonaDiligenciaFormularioComponent,
     PanelButtonsComponent,
     AdditionalInfoComponent,
-    ServiceProviderDataComponent
+    ServiceProviderDataComponent,
+    AcuerdoConfidencialidadComponent
 ],
   templateUrl: './vinculacion-juridica.component.html',
   styleUrls: ['./vinculacion-juridica.component.css']

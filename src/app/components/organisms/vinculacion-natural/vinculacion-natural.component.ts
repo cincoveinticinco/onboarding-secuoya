@@ -38,7 +38,8 @@ import { DatosBancariosComponent } from '../../molecules/datos-bancarios/datos-b
     BlackButtonComponent,
     PanelButtonsComponent,
     AdditionalInfoComponent,
-    DatosBancariosComponent
+    DatosBancariosComponent,
+    AcuerdoConfidencialidadComponent
   ],
   templateUrl: './vinculacion-natural.component.html',
   styleUrl: './vinculacion-natural.component.css'
